@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitMate</title>
+    <link rel="stylesheet" href="dist/scss/bootstrap.css">
+    <script src="https://kit.fontawesome.com/14ddb12dd0.js" crossorigin="anonymous"></script>
+    <script defer src="dist/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <nav class="navbar sticky-top bg-negro">
+        <button class="navbar-toggler d-block d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button> 
+        <img src="img/LogoGitMate.png" height="40px">
+        <form class="d-flex mx-3">
+            <button class="p-2 text-white btn">
+                <i class="fa-solid fa-message fa-xl"></i>
+            </button>
+            <button class="btn">
+                <img src="./img/UserPFP.png" height="40px" alt="">
+            </button>
+        </form>
+    </nav>
+    <main class="row container-xxl">
+        <section class="col-12 col-md-4" id="navbarScroll">
+            <h2 class="fs-5 d-none d-lg-block">Active Project Servers</h2>
+            <h2 class="fs-6 d-block d-lg-none">Active Project Servers</h2>
+            <a href="#" class="mx-3 d-flex flex-row my-2 link-lead">
+                <img src="img/LogoGM.png" height="30px" alt="GitMate">
+                <p class="text-lead my-auto">GitMate</p>
+            </a>
+            <a href="#" class="mx-3 d-flex flex-row my-2 link-lead">
+                <img src="img/angularjs.png" height="30px" alt="GitMate">
+                <p class="text-lead my-auto">Angular</p>
+            </a>
+        </section>
+        <section class="col-12 col-md-8 p-3">
+            <form class="bg-negro p-2 rounded-4">
+                <textarea class="bg-negro-light w-100 rounded-4 p-3 text-secondary" rows="4" placeholder="What's up?" required></textarea>
+                <span class="badge bg-secondary">Question</span>
+                <button class="btn btn-primary" type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

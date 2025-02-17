@@ -1,0 +1,61 @@
+// Required
+@import "../node_modules/bootstrap/scss/functions";
+
+// Colores Personalizados
+$git:     #f44d27 !default;
+$negro:   #1f1f1f !default;
+$blanco:  #f1f1f1 !default;
+
+$custom-colors: (
+  "git": $git,
+  "negro": $negro,
+  "blanco": $blanco
+);
+
+
+$negro-100: tint-color($negro, 20%) !default;
+$negro-200: tint-color($negro, 15%) !default;
+$negro-300: tint-color($negro, 10%) !default;
+$negro-400: tint-color($negro, 5%) !default;
+$negro-500: tint-color($negro, 3%) !default;
+$negro-600: shade-color($negro, 20%) !default;
+$negro-700: shade-color($negro, 40%) !default;
+$negro-800: shade-color($negro, 60%) !default;
+$negro-900: shade-color($negro, 80%) !default;
+
+$negros: (
+  "negro-100": $negro-100,
+  "negro-200": $negro-200,
+  "negro-300": $negro-300,
+  "negro-400": $negro-400,
+  "negro-500": $negro-500,
+  "negro-600": $negro-600,
+  "negro-700": $negro-700,
+  "negro-800": $negro-800,
+  "negro-900": $negro-900
+) !default;
+
+// Default variable overrides
+$body-bg: $negro-400;
+$body-color: #f1f1f1;
+
+
+// Required
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+
+// mapas de color (no se suele tocar)
+$colors: map-merge($colors, $custom-colors);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// Also Required
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+
+// Optional Bootstrap components here
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+// etc
+@import "../node_modules/bootstrap/scss/bootstrap";
