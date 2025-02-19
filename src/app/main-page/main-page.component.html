@@ -15,21 +15,13 @@
     </section>
   }
   <section class="col-12 col-md-7 p-3">
-    <form class="bg-negro p-2 rounded-4">
-      <textarea class="bg-negro-claro w-100 rounded-4 p-3 text-secondary form-control mb-2" rows="4" placeholder="What's up?" required></textarea>
-      <div class="btn-group">
-        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-          Question
-        </button>
-        <ul class="dropdown-menu bg-body">
-          <li><a class="dropdown-item bg-primary rounded" href="#">Question</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item bg-danger rounded" href="#">Another action</a></li>
-          <li><a class="dropdown-item bg-info rounded" href="#">Another action</a></li>
-          <li><a class="dropdown-item text-bg-warning rounded" href="#">Another action</a></li>
-        </ul>
-      </div>
-      <button class="btn btn-git" type="submit">Send</button>
+    <form class="bg-negro p-2 rounded-4 row justify-content-between p-3">
+      <textarea class="bg-negro-claro w-100 rounded-4 p-3 text-blanco form-control mb-2" rows="4" placeholder="What's up?" required></textarea>
+      <app-tag-selector class="col-2"></app-tag-selector>
+      <button class="btn btn-git col-3" type="submit">Send</button>
     </form>
+    <section class="p-4">
+      <app-tag-selector></app-tag-selector>
+    </section>
   </section>
 </main>

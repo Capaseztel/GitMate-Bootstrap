@@ -7,6 +7,10 @@ $git:     #f44d27 !default;
 $negro:   #1f1f1f !default;
 $blanco:  #f1f1f1 !default;
 $lead:    #6f6f6f !default;
+$primary: #2e64d0 !default;
+$warning: #d0c22e !default;
+$danger:  #d02e2e !default;
+$success: #41d02e !default;
 
 $negro-100: tint-color($negro, 20%) !default;
 $negro-200: tint-color($negro, 15%) !default;
@@ -50,8 +54,14 @@ $link-color: $lead;
 
 $input-focus-border-color: $git;
 $input-focus-box-shadow: none;
+$input-border-color: $lead;
+$input-placeholder-color: $lead;
+$input-color: $negro;
+$input-bg: $blanco;
 
 $dropdown-link-hover-color: $negro;
+
+$dropdown-min-width: 0px;
 
 // Required
 @import "../node_modules/bootstrap/scss/variables";
@@ -74,3 +84,34 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 // etc
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+
+.big-btn {
+  color: $negro;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  box-shadow: 5px 5px 0 #b0371c;
+  &:hover {
+    box-shadow: 0 0 0 #b0371c;
+    background-color: $git;
+  }
+}
+
+.dropdown-toggle, .dropdown-item {
+  cursor: pointer;
+  font-size: 0.7rem;
+  height: fit-content;
+  padding: 0.2rem 0.4rem;
+}
+
+
+.dropdown-menu {
+  border: 1px solid $negro-100;
+}
+
+.form-control {
+  box-shadow: inset -1px 1px 10px $negro-100;
+  &:focus{
+    box-shadow: inset -1px 1px 10px $negro-100;
+  }
+}
