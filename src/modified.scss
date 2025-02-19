@@ -63,6 +63,8 @@ $dropdown-link-hover-color: $negro;
 
 $dropdown-min-width: 0px;
 
+$form-check-input-checked-bg-color: $git;
+
 // Required
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/variables-dark";
@@ -110,7 +112,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 }
 
 .form-control {
-  box-shadow: inset -1px 1px 10px $negro-100;
+  box-shadow: inset -1px 1px 4px $negro-100;
   &:focus{
     box-shadow: inset -1px 1px 10px $negro-100;
   }

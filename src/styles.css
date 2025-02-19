@@ -1000,8 +1000,8 @@ textarea.form-control-lg {
   box-shadow: 0 0 0 0.25rem rgba(46, 100, 208, 0.25);
 }
 .form-check-input:checked {
-  background-color: #2e64d0;
-  border-color: #2e64d0;
+  background-color: #f44d27;
+  border-color: #f44d27;
 }
 .form-check-input:checked[type=checkbox] {
   --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
@@ -4120,8 +4120,8 @@ textarea.form-control-lg {
   box-shadow: 0 0 0 0.25rem rgba(46, 100, 208, 0.25);
 }
 .form-check-input:checked {
-  background-color: #2e64d0;
-  border-color: #2e64d0;
+  background-color: #f44d27;
+  border-color: #f44d27;
 }
 .form-check-input:checked[type=checkbox] {
   --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
@@ -14927,7 +14927,7 @@ textarea.form-control-lg {
 }
 
 .form-control {
-  box-shadow: inset -1px 1px 10px #4c4c4c;
+  box-shadow: inset -1px 1px 4px #4c4c4c;
 }
 .form-control:focus {
   box-shadow: inset -1px 1px 10px #4c4c4c;
