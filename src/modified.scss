@@ -38,7 +38,9 @@ $custom-colors: (
   "git": $git,
   "negro": $negro,
   "negro-claro": $negro-500,
-  "blanco": $blanco
+  "blanco": $blanco,
+  "lead" : $lead,
+  "negro-oscuro": $negro-600
 );
 
 
@@ -87,6 +89,10 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 // etc
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+textarea {
+  field-sizing: content;
+  resize: none;
+}
 
 .big-btn {
   color: $negro;

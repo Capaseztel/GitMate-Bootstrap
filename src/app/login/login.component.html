@@ -1,19 +1,42 @@
 <div class="mt-5 container-sm d-flex flex-column align-items-center">
-  <i class="fa-brands fa-java position-relative" style="top: 20px; left: -350px; transform: rotate(17deg); font-size: 100px; margin-bottom: -100px"></i>
-  <i class="fa-brands fa-js position-relative" style="top: 20px; left: 350px; transform: rotate(-27deg); font-size: 100px; margin-bottom: -100px"></i>
-  <i class="fa-brands fa-gitlab position-relative text-git" style="top: 300px; left: -450px; transform: rotate(-26deg); font-size: 100px; margin-bottom: -100px"></i>
-  <i class="fa-brands fa-angular position-relative" style="top: 300px; left: 450px; transform: rotate(15deg); font-size: 100px;"></i>
+  <i class="fa-brands fa-java position-relative"
+     style="top: 20px; left: -350px; transform: rotate(17deg); font-size: 100px; margin-bottom: -100px"></i>
+  <i class="fa-brands fa-square-js position-relative"
+     style="top: 20px; left: 350px; transform: rotate(-27deg); font-size: 100px; margin-bottom: -100px"></i>
+  <i class="fa-brands fa-gitlab position-relative text-git"
+     style="top: 300px; left: -450px; transform: rotate(-26deg); font-size: 100px; margin-bottom: -100px"></i>
+  <i class="fa-brands fa-angular position-relative"
+     style="top: 300px; left: 450px; transform: rotate(15deg); font-size: 100px;"></i>
   <img src="img/LogoGitMate.png" height="200px">
   <h1 class="mt-5">"Developer's Social Network"</h1>
-  <form class="row g-2 justify-content-between mt-5 w-50" action="main">
-    <input type="text" class="form-control w-50" placeholder="Username">
-    <input type="text" class="form-control w-50" placeholder="@Unique_name">
-    <input type="text" class="form-control" placeholder="Email">
-    <input type="password" class="form-control w-50" placeholder="Password">
-    <input type="password" class="form-control w-50" placeholder="Confirm Password">
+  <form class="row justify-content-between mt-5 w-50" action="main">
+    <div class="w-50 p-2">
+      <input type="text" class="form-control" placeholder="Username">
+    </div>
+    <div class="w-50 p-2">
+      <input type="text" class="form-control" placeholder="@Unique_name">
+    </div>
+    <div class="w-100 p-2">
+      <input type="text" class="form-control" placeholder="Email">
+    </div>
+    <div class="w-50 p-2">
+      <input type="{{passwordType}}" class="form-control" placeholder="Password">
+    </div>
+    <div class="w-50 p-2">
+      <input type="{{passwordType}}" class="form-control" placeholder="Confirm Password">
+    </div>
+    <label role="button" class="small user-select-none pointer-event" (click)="togglePassword()">
+      @if (showPasswd) {
+        <i class="fa-solid fa-eye-low-vision text-git"></i>
+      } @else {
+        <i class="fa-solid fa-eye text-git"></i>
+      }
+      Show my password
+    </label>
     <label class="form-check-label mx-auto mt-3">
       <input type="checkbox" class="form-check-input" id="terms">
-      I consent to the <a href="https://google.com" target="_blank" class="link-git">terms and conditions</a> of GitMate and the process of my data by the rules of EU.
+      I consent to the <a href="https://google.com" target="_blank" class="link-git">terms and conditions</a> of GitMate
+      and the process of my data by the rules of EU.
     </label>
     <input type="submit" class="btn btn-git big-btn w-25 mx-auto mt-5" value="Sign Up">
   </form>

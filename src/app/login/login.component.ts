@@ -7,7 +7,15 @@ import { Component } from '@angular/core';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+  showPasswd = false;
+  passwordType = 'password';
+
   constructor() {
     document.body.style.backgroundColor = '#1f1f1f';
+  }
+
+  togglePassword() {
+    this.showPasswd = !this.showPasswd;
+    this.passwordType = this.showPasswd ? 'text' : 'password';
   }
 }
