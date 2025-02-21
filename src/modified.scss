@@ -89,10 +89,6 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 // etc
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-textarea {
-  field-sizing: content;
-  resize: none;
-}
 
 .big-btn {
   color: $negro;
@@ -112,6 +108,13 @@ textarea {
   padding: 0.2rem 0.4rem;
 }
 
+// Custom styles
+
+// !! No compatible con firefox ni safari
+.input-resizable {
+  field-sizing: content;
+  resize: none;
+}
 
 .dropdown-menu {
   border: 1px solid $negro-100;
