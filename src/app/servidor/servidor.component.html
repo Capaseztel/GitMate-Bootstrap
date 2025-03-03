@@ -1,6 +1,7 @@
-<app-nav-bar></app-nav-bar>
-<main class="row m-auto">
-  <section class="pt-5 bg-negro-oscuro col-2 vh-100 flex-shrink-0" style="box-shadow: 3px 0 10px black">
+<app-nav-bar (onToggle)="Toggle()"></app-nav-bar>
+<main class="row m-auto" (window:resize)="update()">
+  @if (AsideToggle &&  PageWidth < 770) {
+  <section class="pt-5 bg-negro-oscuro col-7 z-1 vh-100 flex-shrink-0 position-absolute" style="box-shadow: 3px 0 10px black">
     <section class="mt-5 d-flex">
       <img src="./img/LogoGM.png" class="mx-2" height="30">
       <p class="fs-6 text-lead fw-bold my-auto">GitMate Project</p>
@@ -17,12 +18,31 @@
       <p class="m-0">Add Channel</p>
     </section>
   </section>
-  <section class="pt-5 col-10 vh-100 d-flex flex-column">
-    <h2 class="mt-auto">
+  } @else {
+    <section class="pt-5 bg-negro-oscuro col-2 vh-100 flex-shrink-0 d-none d-lg-block" style="box-shadow: 3px 0 10px black">
+      <section class="mt-5 d-flex">
+        <img src="./img/LogoGM.png" class="mx-2" height="30">
+        <p class="fs-6 text-lead fw-bold my-auto">GitMate Project</p>
+      </section>
+      <hr>
+      <section class="d-flex mb-3" role="button">
+        <h5 class="m-0 me-2">#General</h5>
+        <span class="badge bg-git rounded-circle h-25 my-auto">1</span>
+      </section>
+      <h5 class="mb-3" role="button">#Font-Devs</h5>
+      <h5 class="mb-3" role="button">#Back-Devs</h5>
+      <section class="text-lead d-flex" role="button">
+        <i class="fa-regular fa-square-plus my-auto me-2"></i>
+        <p class="m-0">Add Channel</p>
+      </section>
+    </section>
+  }
+  <section class="pt-5 col-10 vh-100 d-flex flex-column flex-grow-1">
+    <h2 class="mt-5">
       #General
     </h2>
     <hr>
-    <section id="messages" class="p-3 d-flex flex-column-reverse" style="max-height: 470px; overflow: scroll; overflow-x: hidden">
+    <section id="messages" class="p-3 d-flex flex-column-reverse flex-grow-1 h-100" style="overflow: scroll; overflow-x: hidden">
       <article>
         <section class="d-flex flex-row flex-wrap">
           <img src="./img/UserPFP.png" class="me-2" height="40px">
@@ -68,7 +88,7 @@
         <p>Mensaje de prueba muy largo. <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec tortor ac neque vehicula pretium et non tortor. Integer eget diam ex. Donec sit amet augue ex. Integer id sem semper, laoreet erat et, vehicula ipsum. Phasellus interdum, elit eget varius dapibus, magna risus tempus tellus, ac aliquet sapien lorem at sapien. Nulla facilisi. In id ex vel lacus venenatis sagittis. Vestibulum posuere ligula eget dolor mattis dignissim id ultricies tortor. Vivamus eu sem ultricies, accumsan tortor convallis, volutpat orci. Phasellus congue, felis eget porta vehicula, elit arcu imperdiet odio, id luctus odio est nec justo. Aenean malesuada purus quis consequat interdum.</p>
       </article>
     </section>
-    <form class="bg-transparent w-100 rounded-4 overflow-hidden d-flex mb-2">
+    <form class="bg-transparent w-100 rounded-4 overflow-hidden d-flex mb-2" style="min-height: 60px">
       <textarea class="bg-negro-claro rounded-4 p-3 text-blanco form-control input-resizable"
                 placeholder="Write a message" required></textarea>
       <button class="btn btn-git rounded-4 mx-2 px-4"><i class="fa-solid fa-paper-plane me-1 text-blanco"></i></button>

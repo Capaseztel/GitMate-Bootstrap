@@ -10,5 +10,14 @@ import {NavBarComponent} from '../nav-bar/nav-bar.component';
   styleUrl: './servidor.component.css'
 })
 export class ServidorComponent {
+  AsideToggle = true;
+  PageWidth = document.body.offsetWidth;
 
+  Toggle() {
+    this.AsideToggle = !this.AsideToggle;
+  }
+
+  update() {
+    this.PageWidth = document.body.offsetWidth;
+  }
 }
