@@ -1,0 +1,15 @@
+<article class="bg-negro p-2 rounded-4 row p-3 mb-3">
+  <section class="d-flex flex-row flex-wrap mb-2">
+    <img src="./img/UserPFP.png" class="me-2" height="50px">
+    <div>
+      <h1 class="fs-5 mb-0">{{ Post?.user?.name || "!Username" }}</h1>
+      <p class="fs-6 text-lead">&#64; {{ Post?.user?.uniqueName || "!UniqueUsername" }}</p>
+    </div>
+  </section>
+  <p>{{ Post?.text || "!Error - This Field May Be Empty" }}</p>
+    @if (Post?.code) {
+    <pre>
+        <code class="rounded-4 bg-negro-claro" highlight="{{ Post?.code || 'CodeError' }}" [language]="lang"></code>
+    </pre>
+    }
+</article>

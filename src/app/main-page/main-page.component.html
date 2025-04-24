@@ -15,15 +15,25 @@
     </section>
   }
   <section class="col-12 col-md-7 p-3">
-    <form class="bg-negro p-2 rounded-4 row justify-content-between p-3">
+    <form id="addPost" class="bg-negro p-2 rounded-4 row justify-content-between p-3">
       <textarea class="bg-negro-claro w-100 rounded-4 p-3 text-blanco form-control mb-2 input-resizable" rows="4" placeholder="What's up?" required></textarea>
-      <app-tag-selector class="col-2"></app-tag-selector>
+      <select class="bg-negro-oscuro border-0 rounded text-white fw-bold col-md-2 col-3" style="font-size: 12px; padding: 0.3rem 0.3rem; field-sizing: content;">
+        <option>Question</option>
+        <option>Offer</option>
+        <option>Seek</option>
+        <option>Help</option>
+      </select>
       <button class="btn btn-git text-white col-3" type="submit">Send</button>
     </form>
     <section class="p-4">
       <label class="fw-bold me-5 mb-3">
         Category:
-        <app-tag-selector></app-tag-selector>
+          <select class="bg-negro border-0 rounded text-white fw-bold" style="font-size: 12px; padding: 0.3rem 0.3rem; field-sizing: content;">
+            <option>Question</option>
+            <option>Offer</option>
+            <option>Seek</option>
+            <option>Help</option>
+          </select>
       </label>
       <label class="fw-bold">
         Technology:
@@ -38,30 +48,7 @@
         </select>
       </label>
     </section>
-    <article class="bg-negro p-2 rounded-4 row p-3 mb-3">
-      <section class="d-flex flex-row flex-wrap mb-2">
-        <img src="./img/UserPFP.png" class="me-2" height="50px">
-        <div>
-          <h1 class="fs-3 mb-0">Username</h1>
-          <p class="text-lead">&#64;UniqueUsername</p>
-        </div>
-      </section>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at pellentesque mi, in semper nunc. Nunc lacinia lectus et interdum posuere. Curabitur in diam urna. Aliquam vel pharetra urna, vitae volutpat elit. Nullam ornare tincidunt vehicula. Integer nec purus ac sapien sollicitudin dignissim. Etiam tortor erat, malesuada non sagittis in, consectetur at tortor.</p>
-      <img src="img/code.png">
-    </article>
-    <article class="bg-negro p-2 rounded-4 row p-3 mb-3">
-      <section class="d-flex flex-row flex-wrap mb-2">
-        <img src="./img/UserPFP.png" class="me-2" height="50px">
-        <div>
-          <h1 class="fs-3 mb-0">Username</h1>
-          <p class="text-lead">&#64;UniqueUsername</p>
-        </div>
-      </section>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at pellentesque mi, in semper nunc. Nunc lacinia
-        lectus et interdum posuere. Curabitur in diam urna. Aliquam vel pharetra urna, vitae volutpat elit. Nullam ornare tincidunt vehicula. Integer nec purus ac sapien sollicitudin dignissim. Etiam tortor erat, malesuada non sagittis in, consectetur at tortor.
-        <br>
-        Ut at pellentesque mi, in semper nunc. Nunc lacinia lectus et interdum posuere. Curabitur in diam urna. Aliquam vel pharetra urna, vitae volutpat elit.
-      </p>
-    </article>
+    <app-post-component [Post]="testPost" ></app-post-component>
+    <app-post-component [Post]="testPost" ></app-post-component>
   </section>
 </main>
